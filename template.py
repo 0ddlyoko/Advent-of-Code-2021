@@ -2,7 +2,7 @@ def read_values():
     lst = []
     inp = input("")
     try:
-        while inp != "":
+        while inp.lower() != "eof":
             lst.append(inp)
             inp = input("")
     except ValueError:
@@ -20,5 +20,5 @@ def compute(vals):
 
 
 if __name__ == "__main__":
-    ints = read_values()
-    print(compute(ints))
+    data = read_values()
+    print(compute(data))
